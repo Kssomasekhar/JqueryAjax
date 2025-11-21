@@ -1,0 +1,24 @@
+1)Add .cshtml file.
+2)Include jquery path and js file path.
+<!-- include jQuery first -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- then your page script -->
+<script src="~/JqueryScripts/Grid.js"></script>
+
+3)in the js file add document.ready function
+4) Add js file reference path above document.ready function.
+/// <reference path="../scripts/jquery-3.7.0.js" />
+
+5)In the controller action method, for the parameter values to match the exact model values, use same property name in js file
+  var input = {
+   // keys match Employee property names in DomainEntity\Employee.cs
+      Name: txtname,
+      Email: txtemail,
+      Salary: txtsalary,
+      Comments: txtcomments
+  }
+
+6)Use get and post methods in controller.
+
+
